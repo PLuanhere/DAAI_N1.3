@@ -1,7 +1,3 @@
-má
-Hay
-cái mới đi cái cũ bị vỡ
-https://luanphan.atlassian.net/jira/software/projects/KAN/b…IjoiNDg5YWY3NTk4NDlmNGQ2YWI4M2I2ZjEyOTk0MWY1NzIiLCJwIjoiaiJ9
 # DAAI_N1.2
 
 ## 📋 Jira
