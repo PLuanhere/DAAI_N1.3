@@ -2,7 +2,7 @@
 
 ## 📋 Jira
 
-- Liên kết: Chưa cập nhật.
+- Liên kết: (https://luanphan.atlassian.net/jira/software/projects/KAN/boards/2?filter=&groupBy=none&atlOrigin=eyJpIjoiNDg1OGJiNzZjZDdiNDQxYWI1NWZhNGNmNzVkZTViYzciLCJwIjoiaiJ9)
 
 ## 👥 Danh sách thành viên
 
