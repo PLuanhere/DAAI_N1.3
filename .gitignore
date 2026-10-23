@@ -1,0 +1,57 @@
+﻿# DAAI_N1.3 - Problem 3
+
+# Python / Colab
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Visual Studio / SSAS
+.vs/
+bin/
+obj/
+*.suo
+*.vsidx
+*.user
+*.dwproj.user
+
+# SQL Server
+*.bak
+*.mdf
+*.ndf
+*.ldf
+
+# Large data archives
+*.rar
+*.zip
+*.7z
+*.csv.gz
+*.parquet
+
+# Local data
+data/raw/
+data/silver/
+data/3nf/
+data/dw/
+data/gold/
+
+# Credentials
+.env
+.env.*
+!.env.example
+credentials.json
+secrets.json
+*.pem
+*.key
+
+# Temporary files
+*.tmp
+*.log
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Staging
+_problem3_staging/
