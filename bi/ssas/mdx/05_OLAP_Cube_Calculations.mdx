@@ -1,0 +1,36 @@
+/* Base measure names must match exactly. */
+CREATE MEMBER CURRENTCUBE.[Measures].[AOV]
+AS IIF([Measures].[Order Count]=0,NULL,[Measures].[Order Value]/[Measures].[Order Count]),
+FORMAT_STRING='#,##0.00', VISIBLE=1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Basket Size]
+AS IIF([Measures].[Order Count]=0,NULL,[Measures].[Basket Quantity]/[Measures].[Order Count]),
+FORMAT_STRING='#,##0.00', VISIBLE=1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Repeat Rate]
+AS IIF([Measures].[Buyer Count]=0,NULL,[Measures].[Repeat Customer Count]/[Measures].[Buyer Count]),
+FORMAT_STRING='Percent', VISIBLE=1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[One-time Rate]
+AS IIF([Measures].[Buyer Count]=0,NULL,[Measures].[One-time Customer Count]/[Measures].[Buyer Count]),
+FORMAT_STRING='Percent', VISIBLE=1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Average Frequency]
+AS IIF([Measures].[Buyer Count]=0,NULL,[Measures].[Frequency Sum]/[Measures].[Buyer Count]),
+FORMAT_STRING='#,##0.00', VISIBLE=1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Average Monetary]
+AS IIF([Measures].[Buyer Count]=0,NULL,[Measures].[Monetary Sum]/[Measures].[Buyer Count]),
+FORMAT_STRING='#,##0.00', VISIBLE=1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Average Historical CLV]
+AS IIF([Measures].[Buyer Count]=0,NULL,[Measures].[Historical CLV]/[Measures].[Buyer Count]),
+FORMAT_STRING='#,##0.00', VISIBLE=1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Average Days Between Orders]
+AS IIF([Measures].[Repeat Interval Count]=0,NULL,[Measures].[Avg Days Value Sum]/[Measures].[Repeat Interval Count]),
+FORMAT_STRING='#,##0.00', VISIBLE=1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Average Customer Lifespan Days]
+AS IIF([Measures].[Lifespan Customer Count]=0,NULL,[Measures].[Lifespan Days Sum]/[Measures].[Lifespan Customer Count]),
+FORMAT_STRING='#,##0.00', VISIBLE=1;

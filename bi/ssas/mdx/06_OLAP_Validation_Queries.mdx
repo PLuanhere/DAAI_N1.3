@@ -1,0 +1,47 @@
+/* Assumed cube name: [Problem3 Customer Analytics] */
+
+/* Q1 Executive KPIs */
+SELECT
+{
+ [Measures].[Order Count],
+ [Measures].[Order Value],
+ [Measures].[AOV],
+ [Measures].[Basket Size],
+ [Measures].[Customer Count],
+ [Measures].[Buyer Count],
+ [Measures].[Repeat Customer Count],
+ [Measures].[One-time Customer Count],
+ [Measures].[No-purchase Customer Count],
+ [Measures].[Repeat Rate]
+} ON COLUMNS
+FROM [Problem3 Customer Analytics];
+
+/* Q2 Segments */
+SELECT
+{[Measures].[Buyer Count],[Measures].[Historical CLV],[Measures].[Average Frequency],[Measures].[Average Monetary]} ON COLUMNS,
+NON EMPTY [Customer].[Customer Segment].[Customer Segment].MEMBERS ON ROWS
+FROM [Problem3 Customer Analytics];
+
+/* Q3 Repeat vs One-time */
+SELECT
+{[Measures].[Buyer Count],[Measures].[Historical CLV]} ON COLUMNS,
+NON EMPTY [Customer].[Customer Type].[Customer Type].MEMBERS ON ROWS
+FROM [Problem3 Customer Analytics];
+
+/* Q4 Monthly */
+SELECT
+{[Measures].[Order Count],[Measures].[Order Value]} ON COLUMNS,
+NON EMPTY [Date].[Year Month].[Year Month].MEMBERS ON ROWS
+FROM [Problem3 Customer Analytics];
+
+/* Q5 Top categories */
+SELECT
+{[Measures].[Net Sales],[Measures].[Quantity]} ON COLUMNS,
+TOPCOUNT([Product].[Category].[Category].MEMBERS,10,[Measures].[Net Sales]) ON ROWS
+FROM [Problem3 Customer Analytics];
+
+/* Q6 Day of week */
+SELECT
+{[Measures].[Order Count],[Measures].[Order Value]} ON COLUMNS,
+NON EMPTY [Date].[Day Name].[Day Name].MEMBERS ON ROWS
+FROM [Problem3 Customer Analytics];

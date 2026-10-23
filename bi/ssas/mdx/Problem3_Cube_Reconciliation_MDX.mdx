@@ -1,0 +1,106 @@
+﻿/*
+ PROBLEM 3 — SSAS MULTIDIMENSIONAL RECONCILIATION (MDX)
+ Engine  : SQL Server Analysis Services (NOT Database Engine)
+ Server  : DESKTOP-13RTRFP\OLAP2019
+ DB      : Problem3_OLAP
+ Cube    : DSV_Problem3_OLAP (deployed name, NOT .cube filename)
+ Usage   : Highlight exactly ONE SELECT at a time and press Execute.
+ Note    : Some members/hierarchies are deployment-specific; pick their
+           Unique Name from the SSMS Metadata tree if renamed.
+*/
+
+-- M01. Customer overview and repeat rate
+SELECT {
+    [Measures].[Customer Count],
+    [Measures].[Buyer Count],
+    [Measures].[Repeat Customer Count],
+    [Measures].[One-time Customer Count],
+    [Measures].[No-purchase Customer Count],
+    [Measures].[Repeat Rate],
+    [Measures].[One-time Rate]
+} ON COLUMNS
+FROM [DSV_Problem3_OLAP];
+
+-- M02. Order metrics (order-grain measure group)
+SELECT {
+    [Measures].[Order Count],
+    [Measures].[Order Value],
+    [Measures].[Basket Quantity],
+    [Measures].[AOV],
+    [Measures].[Basket Size]
+} ON COLUMNS
+FROM [DSV_Problem3_OLAP];
+
+-- M03. F/M customer segmentation (ignore Unknown/No-purchase row, if visible)
+SELECT { [Measures].[Customer Count] } ON COLUMNS,
+    NON EMPTY [Customer].[Customer Segment].[Customer Segment].MEMBERS ON ROWS
+FROM [DSV_Problem3_OLAP];
+
+-- M04. Repeat / One-time / No-purchase categories
+SELECT { [Measures].[Customer Count] } ON COLUMNS,
+    NON EMPTY [Customer].[Customer Type].[Customer Type].MEMBERS ON ROWS
+FROM [DSV_Problem3_OLAP];
+
+-- M05. Historical CLV total
+SELECT {
+    [Measures].[Historical CLV],
+    [Measures].[Average Historical CLV]
+} ON COLUMNS
+FROM [DSV_Problem3_OLAP];
+
+-- M06. Top 10 customers by historical CLV
+SELECT { [Measures].[Historical CLV] } ON COLUMNS,
+    TOPCOUNT(
+      NONEMPTY([Customer].[Customer].[Customer].MEMBERS,
+               [Measures].[Historical CLV]),
+      10, [Measures].[Historical CLV]
+    ) ON ROWS
+FROM [DSV_Problem3_OLAP];
+
+-- M07. Orders and revenue by Year Month
+SELECT {
+    [Measures].[Order Count], [Measures].[Order Value]
+} ON COLUMNS,
+    NON EMPTY [Date].[Year Month].[Year Month].MEMBERS ON ROWS
+FROM [DSV_Problem3_OLAP];
+
+-- M08. Orders and revenue by Day Name
+SELECT {
+    [Measures].[Order Count], [Measures].[Order Value]
+} ON COLUMNS,
+    NON EMPTY [Date].[Day Name].[Day Name].MEMBERS ON ROWS
+FROM [DSV_Problem3_OLAP];
+
+-- M09. Net Sales by Category
+SELECT { [Measures].[Net Sales] } ON COLUMNS,
+    NON EMPTY [Product].[Category].[Category].MEMBERS ON ROWS
+FROM [DSV_Problem3_OLAP];
+
+-- M10. Dice confirmed in earlier demo: Repeat, 2018, Streetwear
+SELECT { [Measures].[Net Sales] } ON COLUMNS
+FROM [DSV_Problem3_OLAP]
+WHERE (
+    [Customer].[Customer Type].&[Repeat],
+    [Date].[Year].&[2018],
+    [Product].[Category].&[Streetwear]
+);
+
+-- M11. Pivot BEFORE: Category rows x Year columns, Repeat filter
+SELECT
+    NON EMPTY [Date].[Year].[Year].MEMBERS ON COLUMNS,
+    NON EMPTY [Product].[Category].[Category].MEMBERS ON ROWS
+FROM [DSV_Problem3_OLAP]
+WHERE (
+    [Customer].[Customer Type].&[Repeat],
+    [Measures].[Net Sales]
+);
+
+-- M12. Pivot AFTER: Year rows x Category columns, same data/filter
+SELECT
+    NON EMPTY [Product].[Category].[Category].MEMBERS ON COLUMNS,
+    NON EMPTY [Date].[Year].[Year].MEMBERS ON ROWS
+FROM [DSV_Problem3_OLAP]
+WHERE (
+    [Customer].[Customer Type].&[Repeat],
+    [Measures].[Net Sales]
+);

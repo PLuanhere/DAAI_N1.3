@@ -1,0 +1,85 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="bf6f70bc-0dce-4e7a-8803-91e458e62626" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DSV_Problem3_OLAP</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>V FACT CUSTOMER ANALYTICS</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="93630f97-fae0-456c-b7a2-c20d3accbeb4">
+          <ID>V FACT CUSTOMER ANALYTICS</ID>
+          <Name>V FACT CUSTOMER ANALYTICS</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="b7aabae7-709c-4c3d-acaa-66903ce171b2">
+            <DataSourceViewID>DSV_Problem3_OLAP</DataSourceViewID>
+            <TableID>olap_V_FACT_CUSTOMER_ANALYTICS</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>V FACT ORDER OFFICIAL</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="21285399-100d-431d-9b5a-cdde87f47c31">
+          <ID>V FACT ORDER OFFICIAL</ID>
+          <Name>V FACT ORDER OFFICIAL</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="d474dea6-1d68-4f3c-95dd-8f8714cb85b0">
+            <DataSourceViewID>DSV_Problem3_OLAP</DataSourceViewID>
+            <TableID>olap_V_FACT_ORDER_OFFICIAL</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>V FACT CUSTOMER MONTHLY OFFICIAL</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="4772516b-7aa7-40fd-86af-4a734982226e">
+          <ID>V FACT CUSTOMER MONTHLY OFFICIAL</ID>
+          <Name>V FACT CUSTOMER MONTHLY OFFICIAL</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="36fd7ddf-e247-4830-8c2d-4a0b46f85ed3">
+            <DataSourceViewID>DSV_Problem3_OLAP</DataSourceViewID>
+            <TableID>olap_V_FACT_CUSTOMER_MONTHLY_OFFICIAL</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>V FACT SALES LINE OFFICIAL</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="68a2e44d-7990-43f7-878d-738b7fe037a5">
+          <ID>V FACT SALES LINE OFFICIAL</ID>
+          <Name>V FACT SALES LINE OFFICIAL</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="6bfe4789-e21c-4b0a-9a3f-ab40495a3db9">
+            <DataSourceViewID>DSV_Problem3_OLAP</DataSourceViewID>
+            <TableID>olap_V_FACT_SALES_LINE_OFFICIAL</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

@@ -1,0 +1,445 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6271604c-588b-47e4-9222-b1ece574c7e1" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Customer</ID>
+  <Name>Customer</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="13" scrolltop="-5865" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="94" x="3429" y="13462" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="V_DIM_CUSTOMER_ANALYTICS" left="244" top="-2409" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3725" height="5585" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00008d0e0000d1150000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="olap_V_DIM_CUSTOMER_ANALYTICS" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>13</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5865</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>244</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-2409</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>94</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="173">
+            <Shape Id="Customer Key" Expanded="false">
+              <Attributes>
+                <Attribute Id="Customer Key" />
+                <Attribute Id="Age Group" />
+                <Attribute Id="Frequency Level" />
+                <Attribute Id="Gender" />
+                <Attribute Id="Geo Key" />
+                <Attribute Id="Monetary Level" />
+                <Attribute Id="Preferred Category" />
+                <Attribute Id="Signup Date" />
+                <Attribute Id="Zip" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Customer Segment" Expanded="false">
+              <Attributes>
+                <Attribute Id="Customer Segment" />
+              </Attributes>
+              <Position x="241" y="20" />
+            </Shape>
+            <Shape Id="Customer Type" Expanded="false">
+              <Attributes>
+                <Attribute Id="Customer Type" />
+              </Attributes>
+              <Position x="241" y="69" />
+            </Shape>
+            <Shape Id="Acquisition Channel" Expanded="false">
+              <Attributes>
+                <Attribute Id="Acquisition Channel" />
+              </Attributes>
+              <Position x="241" y="118" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="fff0e123-bfaf-44f9-9f0d-d132316980ee">
+    <DataSourceViewID>DSV_Problem3_OLAP</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="1d3b62fb-0311-41b5-b32d-1bc8e9192a7d">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="0eea965a-d42d-4a95-b980-c89ba735acb6">
+      <ID>Customer Key</ID>
+      <Name>Customer</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0f36c8c3-1db6-4c03-b084-16c823459550">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5959ce0f-c4ef-4f44-876b-491cf01735cb">
+            <TableID>olap_V_DIM_CUSTOMER_ANALYTICS</TableID>
+            <ColumnID>customer_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="7c570624-e64d-4af8-97b4-e1b1c2dc31a9">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="79d60240-e8d3-4b20-920a-be868bed243b">
+          <TableID>olap_V_DIM_CUSTOMER_ANALYTICS</TableID>
+          <ColumnID>customer_id</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="57fe43c2-9068-43f3-8f60-31c9404dc047">
+          <AttributeID>Geo Key</AttributeID>
+          <Name>Geo Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0f1152c1-7bf7-4427-baaa-a36b3d100ec3">
+          <AttributeID>Zip</AttributeID>
+          <Name>Zip</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="031b0271-d2cc-4d70-8112-7a2437ddbe10">
+          <AttributeID>Signup Date</AttributeID>
+          <Name>Signup Date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="23026355-7533-40ff-b226-98b17bb0466d">
+          <AttributeID>Gender</AttributeID>
+          <Name>Gender</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="198d3c09-88cc-4ba9-9b9e-c3409e1c6068">
+          <AttributeID>Age Group</AttributeID>
+          <Name>Age Group</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ff178a79-81a8-460f-8b33-ded13d8184ce">
+          <AttributeID>Acquisition Channel</AttributeID>
+          <Name>Acquisition Channel</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0004f238-5825-461d-91b1-2bbbd095decc">
+          <AttributeID>Customer Type</AttributeID>
+          <Name>Customer Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="83efe859-073e-4afd-905c-c8c286399cc8">
+          <AttributeID>Frequency Level</AttributeID>
+          <Name>Frequency Level</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3fc5eb27-f92e-4d40-a177-40a8f38ea353">
+          <AttributeID>Monetary Level</AttributeID>
+          <Name>Monetary Level</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0105df83-0544-44a3-9298-8b4330496e0d">
+          <AttributeID>Customer Segment</AttributeID>
+          <Name>Customer Segment</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d2131746-7c87-4e28-aaa2-691f3ebed6c2">
+          <AttributeID>Preferred Category</AttributeID>
+          <Name>Preferred Category</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="22055493-1e20-47fa-9f33-137c991dd59d">
+      <ID>Geo Key</ID>
+      <Name>Geo Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="251b9107-a13a-4271-adcd-b3ac41cd9f65">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f6b21c2e-7655-4bfc-8703-d6d69bba541c">
+            <TableID>olap_V_DIM_CUSTOMER_ANALYTICS</TableID>
+            <ColumnID>geo_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8df89341-fd60-4955-8b23-4c0ccc6a3cb7">
+      <ID>Zip</ID>
+      <Name>Zip</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="146d3066-4ac5-4857-ac9b-64878fc88cb0">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7e39a966-adf3-4d02-8d29-402e5c9995f1">
+            <TableID>olap_V_DIM_CUSTOMER_ANALYTICS</TableID>
+            <ColumnID>zip</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9f7cf81a-a648-439c-a4d2-ea4f4f6402a3">
+      <ID>Signup Date</ID>
+      <Name>Signup Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="51c17598-cbd8-40da-920d-596ec2bebc05">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bd878ad0-8dc0-41dd-85a7-a48e37b2cba2">
+            <TableID>olap_V_DIM_CUSTOMER_ANALYTICS</TableID>
+            <ColumnID>signup_date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="42b1f23d-93d8-4f5a-8901-3788ff7bfc87">
+      <ID>Gender</ID>
+      <Name>Gender</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="653d3776-9c93-445d-8927-25a016f9cdb2">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f36908ad-a7c4-4d34-90d1-844f6629a370">
+            <TableID>olap_V_DIM_CUSTOMER_ANALYTICS</TableID>
+            <ColumnID>gender</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d679ee23-0314-4799-bb32-f37f0bb05e62">
+      <ID>Age Group</ID>
+      <Name>Age Group</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5f96b0e7-2fcb-4810-aba2-f29f18123a8c">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8f918cb7-51d2-42ad-aa37-3bdd21e7294b">
+            <TableID>olap_V_DIM_CUSTOMER_ANALYTICS</TableID>
+            <ColumnID>age_group</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="db804553-ab01-4ee2-986c-bd03b926aa64">
+      <ID>Acquisition Channel</ID>
+      <Name>Acquisition Channel</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4a46e97f-bcfa-4df7-b5dc-bbca2251ae24">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="07d805bd-8871-4dcf-b7ee-4bda256cbfb2">
+            <TableID>olap_V_DIM_CUSTOMER_ANALYTICS</TableID>
+            <ColumnID>acquisition_channel</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5bf5b514-e15d-4b49-a5dd-6b79490e10a7">
+      <ID>Customer Type</ID>
+      <Name>Customer Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="31279c51-d94f-4088-9099-8bed29ec7d7a">
+          <DataType>WChar</DataType>
+          <DataSize>11</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="75c4a45e-b703-477f-8535-b24785a10909">
+            <TableID>olap_V_DIM_CUSTOMER_ANALYTICS</TableID>
+            <ColumnID>customer_type</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="dcac5ea7-2c04-40f5-aaba-fdd090763cd6">
+        <DataType>WChar</DataType>
+        <DataSize>11</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="010a8d10-6f86-4ff6-97d5-eae49c6c6142">
+          <TableID>olap_V_DIM_CUSTOMER_ANALYTICS</TableID>
+          <ColumnID>customer_type</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="34e5c53e-88f4-48cd-9158-06a90bdab373">
+      <ID>Frequency Level</ID>
+      <Name>Frequency Level</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ef505a78-ca5a-4d01-aa8b-e4df892b019c">
+          <DataType>WChar</DataType>
+          <DataSize>4</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0922def5-54d0-4e3a-923f-5570604581bc">
+            <TableID>olap_V_DIM_CUSTOMER_ANALYTICS</TableID>
+            <ColumnID>frequency_level</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a9f8519e-365e-4166-9bfe-e56e40b98964">
+      <ID>Monetary Level</ID>
+      <Name>Monetary Level</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2515e34b-5a59-4c4f-bda8-84c40f7f6640">
+          <DataType>WChar</DataType>
+          <DataSize>4</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a9dfd9e8-7c94-4169-831b-7192fa0b8676">
+            <TableID>olap_V_DIM_CUSTOMER_ANALYTICS</TableID>
+            <ColumnID>monetary_level</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="59811db9-ab50-4710-bcc3-4d8872296a95">
+      <ID>Customer Segment</ID>
+      <Name>Customer Segment</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b1004281-e0cc-442a-a34e-c7197abbb609">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a2d88184-5d3c-4997-8261-687139a59210">
+            <TableID>olap_V_DIM_CUSTOMER_ANALYTICS</TableID>
+            <ColumnID>customer_segment</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="cc563b63-27be-457c-a0e5-e09415e85d97">
+        <DataType>WChar</DataType>
+        <DataSize>10</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="eb3d2ed6-e375-4471-a5dc-bbd98f6184da">
+          <TableID>olap_V_DIM_CUSTOMER_ANALYTICS</TableID>
+          <ColumnID>customer_segment</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="93d1c06a-4604-44c7-9259-07aa590f2323">
+      <ID>Preferred Category</ID>
+      <Name>Preferred Category</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="26561804-6277-4e8f-8f0e-60125dd86c91">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="771b01ec-61f2-4b1e-9f2e-ff20eafe12c8">
+            <TableID>olap_V_DIM_CUSTOMER_ANALYTICS</TableID>
+            <ColumnID>preferred_category</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="2ced83e7-c8fd-4792-a74f-fe7ea29913dd">
+      <ID>Hierarchy</ID>
+      <Name>Customer Segmentation</Name>
+      <Levels>
+        <Level dwd:design-time-name="206ab7ef-6da8-4434-bae0-705f6aed7cbc">
+          <ID>Customer Segment</ID>
+          <Name>Customer Segment</Name>
+          <SourceAttributeID>Customer Segment</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="18ebbf71-4ec6-414c-a6e8-04eb2986d424">
+          <ID>Customer</ID>
+          <Name>Customer</Name>
+          <SourceAttributeID>Customer Key</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="f0e0277b-ce06-4bb6-9895-036e88ba0c0b">
+      <ID>Hierarchy 1</ID>
+      <Name>Customer Purchase Type</Name>
+      <Levels>
+        <Level dwd:design-time-name="da42f6ab-495b-45db-b98c-2e26e079b458">
+          <ID>Customer Type</ID>
+          <Name>Customer Type</Name>
+          <SourceAttributeID>Customer Type</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="e4c89d95-45b4-4c62-a37e-d2cd2eefef4a">
+          <ID>Customer</ID>
+          <Name>Customer</Name>
+          <SourceAttributeID>Customer Key</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="9b2eb76b-59a3-4a9d-9a88-e46d7245f05d">
+      <ID>Hierarchy 2</ID>
+      <Name>Customer Acquisition</Name>
+      <Levels>
+        <Level dwd:design-time-name="67e188ad-2a4d-4c7d-a61c-f2dc42a4e35d">
+          <ID>Acquisition Channel</ID>
+          <Name>Acquisition Channel</Name>
+          <SourceAttributeID>Acquisition Channel</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="94606486-86ef-4b76-a07b-d9094c346f22">
+          <ID>Customer</ID>
+          <Name>Customer</Name>
+          <SourceAttributeID>Customer Key</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
